@@ -1,0 +1,5 @@
+{
+    "imports": {
+       "archivist/": "file://P:/_Projects/Archivist/archivist/src/"
+    }
+ }

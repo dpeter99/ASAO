@@ -1,0 +1,5 @@
+{
+    "imports": {
+       "archivist/": "https://raw.githubusercontent.com/dpeter99/archivist/0.2.0/src/"
+    }
+ }
