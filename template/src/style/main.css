@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+header{
+    width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+
+    background-color: #463111;
+}
+
+header svg{
+    height: 50px;
+    fill: rgb(223, 151, 17);
+}

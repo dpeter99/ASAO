@@ -41,13 +41,25 @@ export const config: archivist.Config = {
             new archivist.ExtractResources(),
             new archivist.WebUrlOutputResolver(),
             new archivist.TemplateModule({helper:(path, mod)=>{
-                return new archivist.ArticleHelper(path, mod, (doc)=>{
-                    return !doc.name.match(".hu");
-                })
+                return new ASAOHelper(path, mod);
             }}),
             new archivist.OutputModule()
         )
     ]
+}
+
+class ASAOHelper extends archivist.ArticleHelper {
+    
+    constructor(file:string, module:archivist.SimpleModule){
+        super(file,module)
+    }
+
+    ASAO_ID(doc){
+        
+
+        return String(doc.meta.asao_id).padStart(4, '0');
+    }
+
 }
 
 
