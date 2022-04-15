@@ -1,15 +1,9 @@
-body{
-    margin: 0;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-
+@import "./reset.css";
+@import "./variables.css";
+@import "./content.css";
 
 header{
-    width: 100vw;
+    /*width: 100vw;*/
 
     display: flex;
     flex-direction: row;
@@ -20,4 +14,164 @@ header{
 header svg{
     height: 50px;
     fill: rgb(223, 151, 17);
+}
+
+
+
+/*
+#################################################
+############  ASAO Header #######################
+#################################################
+*/
+
+.asao-header{
+    width: 400px;
+
+    background-color: #dddddd;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 4px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 12px;
+
+    margin: 4px;
+
+    font-family: 'Inter', sans-serif;
+}
+
+.asao-header * {
+    --inter-regular-zero: "zero" on;
+}
+
+@supports (font-variant-numeric: slashed-zero) {
+    .asao-header * {
+        --inter-regular-zero: "____";
+        font-variant-numeric: slashed-zero;
+    }
+}
+
+
+.asao-header__first-row{
+    height: 150px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.asao-header__logo{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 6px;
+
+    animation-name: logo-load;
+    animation-duration: calc(0.45s * var(--timeScale) + var(--timeDelay));
+    animation-timing-function: linear;
+
+}
+
+.asao-header__logo img,
+.asao-header__logo svg {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    
+
+    fill: var(--accent-color);
+}
+
+.asao-header__logo svg path{
+    fill: var(--accent-color);
+}
+
+.asao-header__first-row h1 {
+    margin: 0;
+    margin-top: 4px;
+}
+
+.asao-header__id {
+    display: flex;
+    align-items: baseline;
+    height: fit-content;
+
+    transform-origin: bottom left;
+
+    animation-name: header__title;
+    animation-duration: calc(0.45s * var(--timeScale));
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards;
+
+    animation-delay: calc(0.2s * var(--timeScale) + var(--timeDelay));
+}
+
+.asao-header__id span {
+    font-size: 1.5em;
+}
+
+.asao-header__id h1 {
+    font-size: 2.5em;
+}
+
+.asao_header__divider{
+    display: block;
+
+    height: 0.5rem;
+    width: 100%;
+    margin: 0.125rem;
+
+    background-color: var(--accent-color);
+
+    animation-name: header__bar;
+    animation-duration: calc(0.45s * var(--timeScale));
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards;
+
+    animation-delay: calc(0.2s * var(--timeScale) + var(--timeDelay));
+}
+
+
+
+@keyframes header__bar {
+    from { max-width: 0%; }
+    to { max-width: 100%; }
+}
+
+@keyframes logo-load {
+    from { transform: rotate(0);}
+    to { transform: rotate(360deg);}
+}
+
+@keyframes header__title {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+main{
+    margin-left: auto;
+    margin-right: auto;
+
+    width: var(--body-width-on-desktop, 45.75rem);
+    max-width: var(--body-width-on-desktop, 45.75rem);
+
+}
+
+article{
+    margin-top: 35px;
 }

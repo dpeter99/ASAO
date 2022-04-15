@@ -1,8 +1,22 @@
 
-<div>
-    <div>
-        <%= helper.ASAO_ID(doc) %>
+<div class="asao-header">
+    <div class="asao-header__first-row">
+        <div class="asao-header__logo">
+            <%-include("../assets/logo_small.svg")%>
+        </div>
+        <div>
+            <div class="asao-header__id">
+                <span>ASAO-#</span>
+                <h1><%= helper.ASAO_ID(doc) %></h1>
+            </div>
+            <div class="asao_header__divider">
+                
+            </div>
+        </div>
+        
+        
     </div>
+    
 </div>
 
 

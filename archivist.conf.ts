@@ -36,7 +36,7 @@ export const config: archivist.Config = {
                 }
             }),
             new archivist.MarkdownRender({
-                shiftHeadersAmount:0
+                shiftHeadersAmount:1
             }),
             new archivist.ExtractResources(),
             new archivist.WebUrlOutputResolver(),

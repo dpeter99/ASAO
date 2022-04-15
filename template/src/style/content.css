@@ -1,0 +1,12 @@
+*{
+    --article-font-size: 1em;
+}
+
+
+h1{
+    font-size: calc(1.5*var(--article-font-size));
+}
+
+h2{
+    font-size: calc(1.2*var(--article-font-size));
+}

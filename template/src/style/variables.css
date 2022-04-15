@@ -1,0 +1,8 @@
+* {
+    --accent-color: rgb(223, 151, 17);
+
+    --timeScale: 1;
+    --timeDelay: 1s;
+
+    --body-width-on-desktop: 45.75rem;
+}
